@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membership - Prime Fitness Club</title>
+
+  <!-- Bootstrap + Animate.css + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+
+  <style>
+      .logo-img {
+    height: 100px;
+    width: 100px;
+    margin: 0px;
+  }
+    body {
+      background: linear-gradient(to right, #1e1e1e, #2a2a2a);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    nav{
+      margin-bottom: 60px;
+    }
+
+    .membership-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      transition: transform 0.4s ease, box-shadow 0.3s;
+      padding: 30px 20px;
+      height: 100%;
+    }
+
+    .membership-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0,255,204,0.2);
+    }
+
+    .membership-card h4 {
+      font-size: 2rem;
+      color: #00e6b8;
+      margin-bottom: 20px;
+    }
+
+    .membership-card ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+
+    .membership-card ul li {
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .membership-card ul li i {
+      color: #00e6b8;
+      margin-right: 8px;
+    }
+
+    .btn-join {
+      background-color: #00e6b8;
+      border: none;
+      color: #111;
+      padding: 10px 30px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-join:hover {
+      background-color: #00c9a3;
+      transform: scale(1.05);
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 1rem;
+      display: inline-block;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container" style="font-weight: 900; font-size: large;">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/173a2562-1c56-4cb6-b316-3125440d36a6-removebg-preview.png" alt="Logo" class="logo-img" style="position: absolute;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about us.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
+          <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container text-center">
+    <h1 class="mb-4 animate__animated animate__fadeInDown">Choose Your Membership</h1>
+    <p class="mb-5 animate__animated animate__fadeInUp">Flexible plans to fuel your fitness goals.</p>
+
+    <div class="row g-4">
+        <!-- Basic -->
+        <div class="col-md-4 animate__animated animate__fadeInLeft">
+          <div class="membership-card">
+            <h4>Basic</h4>
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Full Gym Access (6 AM - 10 PM)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Changing Room & Lockers</li>
+              <li><i class="bi bi-check-circle-fill"></i> Free Health Check (Monthly)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Access to Drinking Water</li>
+              <li><i class="bi bi-check-circle-fill"></i> Introductory Trainer Guidance</li>
+            </ul>
+            <h5>$10 / Month</h5>
+            <a href="index.html#contact" class="btn btn-join mt-3 animate__animated animate__pulse animate__infinite">Join Now</a>
+          </div>
+        </div>
+      
+        <!-- Standard -->
+        <div class="col-md-4 animate__animated animate__fadeInUp">
+          <div class="membership-card">
+            <h4>Standard</h4>
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Everything in Basic Plan</li>
+              <li><i class="bi bi-check-circle-fill"></i> Unlimited Group Classes (Yoga, Zumba, HIIT)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Custom Diet Plan (Monthly)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Body Composition Analysis</li>
+              <li><i class="bi bi-check-circle-fill"></i> Free Towel Service</li>
+            </ul>
+            <h5>$20 / Month</h5>
+            <a href="index.html#contact" class="btn btn-join mt-3 animate__animated animate__pulse animate__infinite">Join Now</a>
+          </div>
+        </div>
+      
+        <!-- Premium -->
+        <div class="col-md-4 animate__animated animate__fadeInRight">
+          <div class="membership-card">
+            <h4>Premium</h4>
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Everything in Standard Plan</li>
+              <li><i class="bi bi-check-circle-fill"></i> Dedicated Personal Trainer (3x/week)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Unlimited Spa & Sauna Access</li>
+              <li><i class="bi bi-check-circle-fill"></i> Priority Support & Private Locker</li>
+              <li><i class="bi bi-check-circle-fill"></i> 2 Guest Passes/Month</li>
+            </ul>
+            <h5>$30 / Month</h5>
+            <a href="index.html" class="btn btn-join mt-3 animate__animated animate__pulse animate__infinite">Join Now</a>
+          </div>
+        </div>
+      </div>
+    <div>
+    <a href="index.html" class="back-btn mt-5"><i class="bi bi-arrow-left"></i> Back to Home</a>
+  </div>
+
+</body>
+</html>

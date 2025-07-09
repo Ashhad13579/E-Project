@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prime Fitness Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {background: #1e1e1e; color: white; }
+    .carousel-caption { position: absolute; top: 30%; left: 10%; z-index: 2; text-align: left; }
+    .carousel-caption h1 { font-size: 3.5rem; font-weight: bold; }
+    .carousel-caption p { font-size: 1.3rem; }
+    .carousel-item video, .carousel-item img { object-fit: cover; height: 80vh; width: 80%; }
+    .service-card { margin-bottom: 60px; }
+    .service-card img { border-radius: 10px; height: 350px; width: 600px; }
+    .review-card { background: #2a2a2a; border-radius: 10px; padding: 20px; margin: 15px; }
+    footer { background: #121212; color: #ccc; padding: 40px 0; }
+    footer a { color: #00e6b8; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .carousel-item {transition: transform 1s ease-in-out;}
+   nav img {position: absolute; height: 300px; width: 80px; top:-0px;}
+   nav img:hover{box-shadow: none;}
+   a:hover{font-weight: 900;}
+  img{transition: all 0.3s ease;}
+img:hover {box-shadow: 0 0 20px cyan;transform: scale(1.05);}
+h1:hover{color: cyan;}
+h2:hover{color: cyan;}
+h3:hover{color: cyan;}
+h5:hover{color: cyan;}
+h6:hover{color: cyan;}
+h6:hover{color: cyan;}
+strong:hover{color: cyan;}
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #00e6b8;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#backToTopBtn {
+  position: fixed;
+   top: 10px;
+   right: 950px;
+  z-index: 99;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  background-color: #00e6b8;
+  color: black;
+  cursor: pointer;
+  padding: 7px 18px;
+  border-radius: 20%;
+  box-shadow: 0 0 10px #00e6b8;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#backToTopBtn:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+  </style>
+</head>
+<body>
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/173a2562-1c56-4cb6-b316-3125440d36a6-removebg-preview.png" alt="Logo" style="height:60px"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about us.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
+          <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <section class="video-carousel">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <video class="d-block w-100" autoplay loop muted>
+            <source src="videos/6389564-uhd_3840_2160_25fps (online-video-cutter.com).mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="carousel-item">
+          <video class="d-block w-100" autoplay loop muted>
+            <source src="videos/4761711-uhd_4096_2160_25fps.mp"4 type="video/mp4">
+          </video>
+        </div>
+        <div class="carousel-item active">
+          <video class="d-block w-100" autoplay loop muted>
+            <source src="videos/4761426-uhd_4096_2160_25fps.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Push Your Limits</h1>
+        <p>Train harder. Feel stronger. Become your best version.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="container py-5">
+    <div class="text-center mb-5"><h2>Our Services</h2></div>
+
+    <div class="row align-items-center service-card" data-aos="fade-right" data-aos-delay="0">
+      <div class="col-md-6">
+        <img src="images/pexels-cottonbro-7689295.jpg" class="img-fluid" alt="Cycling">
+      </div>
+      <div class="col-md-6">
+        <h4>Cycling Classes</h4>
+        <p>
+          ► Boost your stamina and burn calories in our high‑energy cycling studio. Whether you're a beginner or a seasoned rider, our immersive cycling classes combine motivating music, energetic instructors, and endurance-based workouts that will push your limits and keep you coming back for more.
+        </p>
+        
+      </div>
+    </div>
+
+    <div class="row align-items-center service-card flex-row-reverse" data-aos="fade-left" data-aos-delay="200">
+      <div class="col-md-6">
+        <img src="images/pexels-69035116-8328775.jpg" class="img-fluid" alt="Swimming ">
+      </div>
+      <div class="col-md-6">
+        <h4>Swimming Pool</h4>
+        <p>
+          ► Our Olympic‑size pool is perfect for lap training, swimming lessons, or low-impact recovery workouts. With crystal-clear water and dedicated swim lanes, it offers an ideal environment for building cardiovascular strength, improving flexibility, and relieving muscle tension.
+        </p>
+        
+      </div>
+    </div>
+
+    <div class="row align-items-center service-card" data-aos="fade-right" data-aos-delay="400">
+      <div class="col-md-6">
+        <img src="images/pexels-yankrukov-8436583.jpg" class="img-fluid" alt="Group Classes">
+      </div>
+      <div class="col-md-6">
+        <h4>Group Classes</h4>
+        <p>
+          ► Join our vibrant group sessions that include Zumba, HIIT, yoga, strength training, and more. Led by certified trainers, these classes offer a supportive, energetic atmosphere that makes fitness fun, boosts accountability, and helps you stay consistent with your goals.
+        </p>
+        
+      </div>
+    </div>
+
+    <div class="row align-items-center service-card flex-row-reverse" data-aos="fade-left" data-aos-delay="800">
+      <div class="col-md-6">
+        <img src="images/images.jpg" class="img-fluid" alt="Spa">
+      </div>
+      <div class="col-md-6">
+        <h4>Wellness & Spa</h4>
+        <p>
+          ► Recharge and relax with our luxurious spa facilities, featuring massage therapy, sauna, steam rooms, and more. Ideal for post-workout recovery or a peaceful escape from stress, our wellness services are designed to promote full-body healing and mental clarity.
+        </p>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="py-5 bg-dark">
+    <div class="container">
+      <h2 class="text-center mb-5">What Our Members Say</h2>
+      <div class="row text-center">
+        <div class="col-md-4"><div class="review-card"><i class="bi bi-person-circle fs-2"></i>
+          <p>"Prime Fitness gave me the motivation I needed!"</p><strong> - Member A</strong>
+          <p class="text-warning">★★★★★</p>
+        </div></div>
+        <div class="col-md-4"><div class="review-card"><i class="bi bi-person-circle fs-2"></i>
+          <p>"Excellent equipment and super friendly staff. Very Satisfied"</p><strong>- Member B</strong>
+          <p class="text-warning">★★★★★</p>
+        </div></div>
+        <div class="col-md-4"><div class="review-card"><i class="bi bi-person-circle fs-2"></i>
+          <p>"Loving the group classes—they keep me consistent."</p><strong>- Member C</strong>
+          <p class="text-warning">★★★★★</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Prime Fitness Club</h5>
+          <p>&copy; 2025 All Rights Reserved</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="about us.html">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Contact</h5>
+          <p>Email: info@primefitness.com</p>
+          <p>Phone: +92 300 1234567</p>
+          <div>
+            <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+ <!-- Preloader animation  -->
+ <script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    setTimeout(() => preloader.style.display = "none", 500);
+  });
+</script>
+<!-- scroll to top -->
+<script>
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTopBtn");
+    btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+  };
+
+  function scrollToTop() {
+  document.querySelector("html").scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+</script>
+</body>
+</html>
