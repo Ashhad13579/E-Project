@@ -259,13 +259,23 @@ strong:hover{color: cyan;}
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
  <!-- Preloader animation  -->
- <script>
-  window.addEventListener("load", () => {
+<script>
+  function hidePreloader() {
     const preloader = document.getElementById("preloader");
-    preloader.style.opacity = "0";
-    setTimeout(() => preloader.style.display = "none", 500);
-  });
+    if (preloader) {
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500);
+    }
+  }
+
+  window.addEventListener("load", hidePreloader);
+
+  // Fallback: hide preloader after 6 seconds even if load doesn't fire
+  setTimeout(hidePreloader, 6000);
 </script>
+
 <!-- scroll to top -->
 <script>
   window.onscroll = function () {
